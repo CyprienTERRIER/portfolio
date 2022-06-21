@@ -1,3 +1,83 @@
+
+:root {
+    --color: #121212;
+    --color2: rgba(255, 255, 255, 0.808);
+}
+
 body {
-    background-color: #00002c;
+    background-color: var(--color);
+    animation: 1s linear forwards bgcolor 4s;
+}
+
+@keyframes bgcolor {
+  100% {background: #181818;}
+}
+
+#hide {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  background-color: var(--color);
+  transform: translate(17%,-50%) rotate(45deg);
+}
+
+#logo_c {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 -50px 0 8px var(--color), -75px -75px 0 8px var(--color), -75px 75px 0 8px var(--color), 50px 120px 0 8px var(--color);
+    animation: .5s linear border forwards 1s, .5s ease-in-out click 2s forwards, .5s linear border_inverse forwards 3s;
+}
+
+@keyframes border{
+    0% {
+      box-shadow: 0 -50px 0 8px var(--color), -75px -75px 0 8px var(--color), -75px 75px 0 8px var(--color), 50px 120px 0 8px var(--color), 0 0 0 25px var(--color2), 0 0 10px 28px var(--color2);
+    }
+    25% {
+      box-shadow: -75px -75px 0 8px var(--color), -75px -75px 0 8px var(--color), -75px 75px 0 8px var(--color), 50px 120px 0 8px var(--color), 0 0 0 25px var(--color2), 0 0 10px 28px var(--color2);
+    }
+    50% {
+      box-shadow: -75px 75px 0 8px var(--color), -75px 75px 0 8px var(--color), -75px 75px 0 8px var(--color), 50px 120px 0 8px var(--color), 0 0 0 25px var(--color2), 0 0 10px 28px var(--color2);
+    }
+    75% {
+      box-shadow: 50px 120px 0 8px var(--color), 50px 120px 0 8px var(--color), 50px 120px 0 8px var(--color), 50px 120px 0 8px var(--color), 0 0 0 25px var(--color2), 0 0 10px 28px var(--color2);
+    }
+    100% {
+      box-shadow: 164px 0 0 8px var(--color), 164px 0 0 8px var(--color), 164px 0 0 8px var(--color), 164px 0 0 8px var(--color), 0 0 0 25px var(--color2), 0 0 10px 28px var(--color2); 
+    }
+}
+
+@keyframes click {
+    0% {
+        width: 150px; height: 150px;
+    } 
+    50% {
+        width: 140px; height: 140px;
+    }
+    100% {
+        width: 150px; height: 150px;
+    }
+}
+
+@keyframes border_inverse{
+  0% {
+    box-shadow: 100px 0  0 8px var(--color), 100px 0 0 8px var(--color), 100px 0 0 8px var(--color), 100px 0 0 8px var(--color), 0 0 0 25px var(--color2), 0 0 10px 28px var(--color2);
+  }  25% {
+    box-shadow: 75px -75px 0 8px var(--color), 75px -75px 0 8px var(--color), 75px -75px 0 8px var(--color), 75px -75px 0 8px var(--color), 0 0 0 25px var(--color2), 0 0 10px 28px var(--color2);
+  }
+  50% {
+    box-shadow: 75px -75px 0 8px var(--color), -75px -75px 0 8px var(--color), -75px -75px 0 8px var(--color), -75px -75px 0 8px var(--color), 0 0 0 25px var(--color2), 0 0 10px 28px var(--color2);
+  }
+  75% {
+    box-shadow: 75px -75px 0 8px var(--color), -75px -75px 0 8px var(--color), -75px 75px 0 8px var(--color), -75px 75px 8px var(--color), 0 0 0 25px var(--color2), 0 0 10px 28px var(--color2);
+  }
+  100% {
+    box-shadow: 75px -75px  0 8px var(--color), -75px -75px 0 8px var(--color), -75px 75px 0 8px var(--color), 75px 75px 0 8px var(--color), 0 0 0 25px var(--color2), 0 0 10px 28px var(--color2); 
+  }
 }
