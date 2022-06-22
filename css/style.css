@@ -3,12 +3,18 @@
   --color2: #ffffffce;
 }
 
-body {
-  overflow: hidden;
-  height: 100vh;
-  background-color: var(--color);
-  animation: 1s linear forwards bgcolor 4s;
+.he-white {
+  color: #ffffffde;
 }
+
+body {
+  font-family: 'Playfair Display';
+  overflow: hidden;
+  background-color: var(--color);
+  animation: .2s linear forwards bgcolor 4s;
+}
+
+/* enlever loverflow apres*/
 
 @keyframes bgcolor {
   100% {background: #181818;}
@@ -92,8 +98,7 @@ body {
   transform: rotate(45deg);
   top: 10%;
   left: 0;
-  /* box-shadow: 0 0 1px 2px ; */
-  animation: 4s linear forwards straight, .5s ease-in-out click 2s forwards;
+  animation: 3.5s linear forwards straight, .5s ease-in-out click 2s forwards;
 }
 
 @keyframes straight {
@@ -132,7 +137,7 @@ body {
   position: absolute;
   bottom: 10%;
   right: 0;
-  animation: 4s linear forwards straight2;
+  animation: 3.5s linear forwards straight2;
 }
 
 @keyframes straight2 {
@@ -158,7 +163,7 @@ body {
   position: absolute;
   top: 0;
   left: 15%;
-  animation: 4s linear forwards spin  
+  animation: 3.5s linear forwards spin  
 }
 
 @keyframes spin {
@@ -172,17 +177,104 @@ body {
 .lemon {
   width: 125px;
   height: 125px;
+  opacity: 0;
   background-color: #5353532a;
   position: absolute;
   bottom: -10%;
   right: 40%;
   border-radius: 100% 10%;
-  animation: 4s linear forwards thunder;
+  animation: 3.5s linear forwards thunder;
 }
 
 @keyframes thunder {
-  0% {bottom: -50%; right: 40%; transform: rotate(0);}
+  0% {bottom: -50%; right: 40%; transform: rotate(0); opacity: 1;}
   33% {bottom: 70%; right: 5%;}
   66% {bottom: 10%; right: 85%;}
-  100% {bottom: 100%; right: 70%; transform: rotate(720deg)}
+  100% {bottom: 100%; right: 70%; transform: rotate(720deg); opacity: 1;}
+}
+
+header {
+  transform: translate(0,-100%);
+  background-color: #181818;
+  animation: .1s linear forwards appearsH 4.5s;
+}
+
+@keyframes appearsH {
+  0% {transform: translate(0,-100%);}
+  100% {transform: translate(0,0);}
+}
+
+header span {
+  color: #5858ffde;
+  text-shadow: 1px 1px 2px blue;
+}
+
+header h1 {
+  text-shadow: 1px 1px 2px white;
+}
+
+#name {
+  opacity: 0;
+  font-size: 1.5rem;
+  animation: 1s linear forwards pop 4.7s;
+}
+
+@keyframes pop {
+  0% {opacity: 0; font-size: 0;}
+  100% {opacity: 1; font-size: 1.5rem;}
+}
+
+li {
+  position: relative;
+}
+
+li::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 2px;
+  margin: auto;
+  background-color: white;
+  transform: scale(0,1);
+  transform-origin: left;
+  transition: transform ease-in-out 250ms;
+}
+
+li:hover::after {
+  transform: scale(1);
+}
+
+.nav-link:hover {
+  color: #5858ffde;
+  text-shadow: 1px 1px 2px blue;
+}
+
+.li_left {
+  opacity: 0;
+  animation: 1.5s linear forwards appearsL 4.7s;
+}
+
+.li_left2 {
+  opacity: 0;
+  animation: 1.5s linear forwards appearsL 4.9s;
+}
+
+.li_left3 {
+  opacity: 0;
+  animation: 1.5s linear forwards appearsL 5.1s;
+}
+
+.li_left4 {
+  opacity: 0;
+  animation: 1.5s linear forwards appearsL 5.3s;
+}
+
+.li_left5 {
+  opacity: 0;
+  animation: 1.5s linear forwards appearsL 5.5s;
+}
+
+@keyframes appearsL {
+  0% {opacity: 0; transform: translate(-20%,0);}
+  100% {opacity: 1; transform: translate(0,0);}
 }
