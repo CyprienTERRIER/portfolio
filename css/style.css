@@ -1,12 +1,13 @@
-
 :root {
-    --color: #121212;
-    --color2: rgba(255, 255, 255, 0.808);
+  --color: #121212;
+  --color2: #ffffffce;
 }
 
 body {
-    background-color: var(--color);
-    animation: 1s linear forwards bgcolor 4s;
+  overflow: hidden;
+  height: 100vh;
+  background-color: var(--color);
+  animation: 1s linear forwards bgcolor 4s;
 }
 
 @keyframes bgcolor {
@@ -80,4 +81,108 @@ body {
   100% {
     box-shadow: 75px -75px  0 8px var(--color), -75px -75px 0 8px var(--color), -75px 75px 0 8px var(--color), 75px 75px 0 8px var(--color), 0 0 0 25px var(--color2), 0 0 10px 28px var(--color2); 
   }
+}
+
+.losange {
+  width: 150px;
+  aspect-ratio: 1;
+  position: absolute;
+  background-color: #53535336;
+  border-radius: 10%;
+  transform: rotate(45deg);
+  top: 10%;
+  left: 0;
+  /* box-shadow: 0 0 1px 2px ; */
+  animation: 4s linear forwards straight, .5s ease-in-out click 2s forwards;
+}
+
+@keyframes straight {
+  0% {opacity: 0.2; transform: rotate(0); left: -50%;}
+
+  100% {opacity: 1; transform: rotate(360deg); left: 100%;}
+}
+
+.triangle {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  overflow: hidden;
+  border-bottom: 2px solid #535353ce;
+  border-radius: 2%;
+  bottom: 50%;
+  right: 50%;
+}
+
+.triangle:after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  border-radius: 2%;
+  border: 2px solid #535353ce;
+  transform: rotate(45deg);
+  top: 69px;
+  left: 0;
+}
+
+#triangle_box {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  animation: 4s linear forwards straight2;
+}
+
+@keyframes straight2 {
+  0% {opacity: 0.2; transform: rotate(0); right: -50%;}
+
+  100% {opacity: 1; transform: rotate(720deg); right: 100%; }
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: -100%;
+  left: -100%;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid #535353ce;
+}
+
+#circle_box {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 15%;
+  animation: 4s linear forwards spin  
+}
+
+@keyframes spin {
+  0% {opacity: 0.2; transform: rotate(0); top: -50%; left: 15%}
+
+  50% {transform: rotate(240deg); top: 30%; left: 15%}
+
+  100% {opacity: 1; transform: rotate(-480deg); top: 95%; left: 95%}
+}
+
+.lemon {
+  width: 125px;
+  height: 125px;
+  background-color: #5353532a;
+  position: absolute;
+  bottom: -10%;
+  right: 40%;
+  border-radius: 100% 10%;
+  animation: 4s linear forwards thunder;
+}
+
+@keyframes thunder {
+  0% {bottom: -50%; right: 40%; transform: rotate(0);}
+  33% {bottom: 70%; right: 5%;}
+  66% {bottom: 10%; right: 85%;}
+  100% {bottom: 100%; right: 70%; transform: rotate(720deg)}
 }
