@@ -14,8 +14,6 @@ body {
   animation: .2s linear forwards bgcolor 4s;
 }
 
-/* enlever loverflow apres*/
-
 @keyframes bgcolor {
   100% {background: #181818;}
 }
@@ -194,23 +192,38 @@ body {
 }
 
 header {
-  transform: translate(0,-100%);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  transition: .5s ease-in-out;
+}
+
+.scroll-down {
+  transform: translate(0, -100%);
+}
+ 
+.scroll-up {
+  transform: translate(0, 0);
+}
+nav {
+  opacity: 0;
   background-color: #181818;
+  box-shadow: 0 1px 10px 1px #161616;
   animation: .1s linear forwards appearsH 4.5s;
 }
 
 @keyframes appearsH {
-  0% {transform: translate(0,-100%);}
-  100% {transform: translate(0,0);}
+  0% {opacity: 0;}
+  100% {opacity: 0.9;}
 }
 
-header span {
+nav h1 {
+  text-shadow: 1px 1px 2px white;
+}
+
+nav span {
   color: #5858ffde;
   text-shadow: 1px 1px 2px blue;
-}
-
-header h1 {
-  text-shadow: 1px 1px 2px white;
 }
 
 #name {
@@ -251,30 +264,127 @@ li:hover::after {
 
 .li_left {
   opacity: 0;
-  animation: 1.5s linear forwards appearsL 4.7s;
+  animation: .5s linear forwards appearsL 4.7s;
 }
 
 .li_left2 {
   opacity: 0;
-  animation: 1.5s linear forwards appearsL 4.9s;
+  animation: .5s linear forwards appearsL 4.9s;
 }
 
 .li_left3 {
   opacity: 0;
-  animation: 1.5s linear forwards appearsL 5.1s;
+  animation: .5s linear forwards appearsL 5.1s;
 }
 
 .li_left4 {
   opacity: 0;
-  animation: 1.5s linear forwards appearsL 5.3s;
+  animation: .5s linear forwards appearsL 5.3s;
 }
 
 .li_left5 {
   opacity: 0;
-  animation: 1.5s linear forwards appearsL 5.5s;
+  animation: .5s linear forwards appearsL 5.5s;
 }
 
 @keyframes appearsL {
   0% {opacity: 0; transform: translate(-20%,0);}
   100% {opacity: 1; transform: translate(0,0);}
+}
+
+main {
+  opacity: 0;
+  animation: 2s linear forwards appearsD 6s;
+}
+
+@keyframes appearsD {
+  0% {opacity: 0; transform: translate(0,20%);}
+  100% {opacity: 1; transform: translate(0,0);}
+}
+
+
+main div:first-child {
+  margin: 5% 10% 5% 5%;
+  box-shadow: 10px 10px 10px 1px #121212;
+}
+
+main h1, main h2 {
+  font-family: 'Playfair Display', sans-serif;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+main h2 {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+main p:last-child {
+  font-size: 1.2rem;
+  color:rgba(255, 255, 255, 0.5)
+}
+
+main a {
+  margin-left: 10%;
+}
+
+.special_blue {
+  color: #5858ffde;
+  text-shadow: 1px 1px 2px blue;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(125, 125, 126); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #444;
+}
+
+aside {
+  top: 50%;
+  right: 0;
+  opacity: 0;
+  transform: translate(40%,0) rotate(90deg);
+  animation: 2s linear forwards appearsR 6s;
+}
+
+aside::before, aside::after {
+  display: inline-block;
+  content: "";
+  border-top: 1px solid white;
+  width: 5rem;
+  margin: 0 10px;
+}
+
+aside a {
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+aside a:hover {
+  color: #5858ffde;
+  text-shadow: 1px 1px 2px blue;
+}
+
+@keyframes appearsR {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
