@@ -1,6 +1,7 @@
 :root {
-  --color: #121212;
-  --color2: #ffffffce;
+  --color_dark: #121212;
+  --color_whitey: #ffffffce;
+  --color_special_blue: #8383ff;
 }
 
 .he-white {
@@ -10,12 +11,12 @@
 body {
   font-family: 'Playfair Display';
   overflow: hidden;
-  background-color: var(--color);
+  background-color: var(--color_dark);
   animation: .2s linear forwards bgcolor 4s;
 }
 
 @keyframes bgcolor {
-  100% {background: #181818;}
+  100% {background: #202020;}
 }
 
 #hide {
@@ -24,7 +25,7 @@ body {
   left: 50%;
   width: 150px;
   height: 150px;
-  background-color: var(--color);
+  background-color: var(--color_dark);
   transform: translate(17%,-50%) rotate(45deg);
 }
 
@@ -36,25 +37,25 @@ body {
     height: 150px;
     border-radius: 50%;
     transform: translate(-50%,-50%);
-    box-shadow: 0 -50px 0 8px var(--color), -75px -75px 0 8px var(--color), -75px 75px 0 8px var(--color), 50px 120px 0 8px var(--color);
+    box-shadow: 0 -50px 0 8px var(--color_dark), -75px -75px 0 8px var(--color_dark), -75px 75px 0 8px var(--color_dark), 50px 120px 0 8px var(--color_dark);
     animation: .5s linear border forwards 1s, .5s ease-in-out click 2s forwards, .5s linear border_inverse forwards 3s;
 }
 
 @keyframes border{
     0% {
-      box-shadow: 0 -50px 0 8px var(--color), -75px -75px 0 8px var(--color), -75px 75px 0 8px var(--color), 50px 120px 0 8px var(--color), 0 0 0 25px var(--color2), 0 0 10px 28px var(--color2);
+      box-shadow: 0 -50px 0 8px var(--color_dark), -75px -75px 0 8px var(--color_dark), -75px 75px 0 8px var(--color_dark), 50px 120px 0 8px var(--color_dark), 0 0 0 25px var(--color_whitey), 0 0 10px 28px var(--color_whitey);
     }
     25% {
-      box-shadow: -75px -75px 0 8px var(--color), -75px -75px 0 8px var(--color), -75px 75px 0 8px var(--color), 50px 120px 0 8px var(--color), 0 0 0 25px var(--color2), 0 0 10px 28px var(--color2);
+      box-shadow: -75px -75px 0 8px var(--color_dark), -75px -75px 0 8px var(--color_dark), -75px 75px 0 8px var(--color_dark), 50px 120px 0 8px var(--color_dark), 0 0 0 25px var(--color_whitey), 0 0 10px 28px var(--color_whitey);
     }
     50% {
-      box-shadow: -75px 75px 0 8px var(--color), -75px 75px 0 8px var(--color), -75px 75px 0 8px var(--color), 50px 120px 0 8px var(--color), 0 0 0 25px var(--color2), 0 0 10px 28px var(--color2);
+      box-shadow: -75px 75px 0 8px var(--color_dark), -75px 75px 0 8px var(--color_dark), -75px 75px 0 8px var(--color_dark), 50px 120px 0 8px var(--color_dark), 0 0 0 25px var(--color_whitey), 0 0 10px 28px var(--color_whitey);
     }
     75% {
-      box-shadow: 50px 120px 0 8px var(--color), 50px 120px 0 8px var(--color), 50px 120px 0 8px var(--color), 50px 120px 0 8px var(--color), 0 0 0 25px var(--color2), 0 0 10px 28px var(--color2);
+      box-shadow: 50px 120px 0 8px var(--color_dark), 50px 120px 0 8px var(--color_dark), 50px 120px 0 8px var(--color_dark), 50px 120px 0 8px var(--color_dark), 0 0 0 25px var(--color_whitey), 0 0 10px 28px var(--color_whitey);
     }
     100% {
-      box-shadow: 164px 0 0 8px var(--color), 164px 0 0 8px var(--color), 164px 0 0 8px var(--color), 164px 0 0 8px var(--color), 0 0 0 25px var(--color2), 0 0 10px 28px var(--color2); 
+      box-shadow: 164px 0 0 8px var(--color_dark), 164px 0 0 8px var(--color_dark), 164px 0 0 8px var(--color_dark), 164px 0 0 8px var(--color_dark), 0 0 0 25px var(--color_whitey), 0 0 10px 28px var(--color_whitey); 
     }
 }
 
@@ -72,18 +73,18 @@ body {
 
 @keyframes border_inverse{
   0% {
-    box-shadow: 100px 0  0 8px var(--color), 100px 0 0 8px var(--color), 100px 0 0 8px var(--color), 100px 0 0 8px var(--color), 0 0 0 25px var(--color2), 0 0 10px 28px var(--color2);
+    box-shadow: 100px 0  0 8px var(--color_dark), 100px 0 0 8px var(--color_dark), 100px 0 0 8px var(--color_dark), 100px 0 0 8px var(--color_dark), 0 0 0 25px var(--color_whitey), 0 0 10px 28px var(--color_whitey);
   }  25% {
-    box-shadow: 75px -75px 0 8px var(--color), 75px -75px 0 8px var(--color), 75px -75px 0 8px var(--color), 75px -75px 0 8px var(--color), 0 0 0 25px var(--color2), 0 0 10px 28px var(--color2);
+    box-shadow: 75px -75px 0 8px var(--color_dark), 75px -75px 0 8px var(--color_dark), 75px -75px 0 8px var(--color_dark), 75px -75px 0 8px var(--color_dark), 0 0 0 25px var(--color_whitey), 0 0 10px 28px var(--color_whitey);
   }
   50% {
-    box-shadow: 75px -75px 0 8px var(--color), -75px -75px 0 8px var(--color), -75px -75px 0 8px var(--color), -75px -75px 0 8px var(--color), 0 0 0 25px var(--color2), 0 0 10px 28px var(--color2);
+    box-shadow: 75px -75px 0 8px var(--color_dark), -75px -75px 0 8px var(--color_dark), -75px -75px 0 8px var(--color_dark), -75px -75px 0 8px var(--color_dark), 0 0 0 25px var(--color_whitey), 0 0 10px 28px var(--color_whitey);
   }
   75% {
-    box-shadow: 75px -75px 0 8px var(--color), -75px -75px 0 8px var(--color), -75px 75px 0 8px var(--color), -75px 75px 8px var(--color), 0 0 0 25px var(--color2), 0 0 10px 28px var(--color2);
+    box-shadow: 75px -75px 0 8px var(--color_dark), -75px -75px 0 8px var(--color_dark), -75px 75px 0 8px var(--color_dark), -75px 75px 8px var(--color_dark), 0 0 0 25px var(--color_whitey), 0 0 10px 28px var(--color_whitey);
   }
   100% {
-    box-shadow: 75px -75px  0 8px var(--color), -75px -75px 0 8px var(--color), -75px 75px 0 8px var(--color), 75px 75px 0 8px var(--color), 0 0 0 25px var(--color2), 0 0 10px 28px var(--color2); 
+    box-shadow: 75px -75px  0 8px var(--color_dark), -75px -75px 0 8px var(--color_dark), -75px 75px 0 8px var(--color_dark), 75px 75px 0 8px var(--color_dark), 0 0 0 25px var(--color_whitey), 0 0 10px 28px var(--color_whitey); 
   }
 }
 
@@ -112,8 +113,10 @@ body {
   overflow: hidden;
   border-bottom: 2px solid #535353ce;
   border-radius: 2%;
-  bottom: 50%;
+  bottom: 10%;
   right: 50%;
+  transform-origin: top left;
+  animation: 3.5s linear forwards straight2;
 }
 
 .triangle:after {
@@ -129,14 +132,6 @@ body {
   left: 0;
 }
 
-#triangle_box {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  bottom: 10%;
-  right: 0;
-  animation: 3.5s linear forwards straight2;
-}
 
 @keyframes straight2 {
   0% {opacity: 0.2; transform: rotate(0); right: -50%;}
@@ -153,16 +148,10 @@ body {
   background-color: transparent;
   border-radius: 50%;
   border: 2px solid #535353ce;
-}
-
-#circle_box {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 0;
-  left: 15%;
+  transform-origin: 10px 100px;
   animation: 3.5s linear forwards spin  
 }
+
 
 @keyframes spin {
   0% {opacity: 0.2; transform: rotate(0); top: -50%; left: 15%}
@@ -221,8 +210,8 @@ nav h1 {
   text-shadow: 1px 1px 2px white;
 }
 
-nav span {
-  color: #5858ffde;
+span {
+  color: #8383ff;
   text-shadow: 1px 1px 2px blue;
 }
 
@@ -258,7 +247,7 @@ li:hover::after {
 }
 
 .nav-link:hover {
-  color: #5858ffde;
+  color: var(--color_special_blue);
   text-shadow: 1px 1px 2px blue;
 }
 
@@ -294,8 +283,7 @@ li:hover::after {
 
 main {
   max-width: 1300px;
-  margin-top: 10%;
-  margin-bottom: 50vh;
+  margin: 25vh auto 35vh auto;
   opacity: 0;
   animation: 2s linear forwards appearsD 6s;
 }
@@ -309,9 +297,11 @@ main {
 main div:first-child {
   margin: 5% 10% 5% 5%;
   box-shadow: 10px 10px 10px 1px #121212;
+  background-color: #191919;
+  border-radius: 10% 0 10% 0;
 }
 
-main h1, main h2 {
+main h1, main h2, #about h1, #competence h1 {
   font-family: 'Playfair Display', sans-serif;
 }
 
@@ -331,11 +321,6 @@ main p:last-child {
 main a {
   margin-left: auto;
   margin-right: 10%;
-}
-
-.special_blue {
-  color: #5858ffde;
-  text-shadow: 1px 1px 2px blue;
 }
 
 /* width */
@@ -370,7 +355,7 @@ aside {
   animation: 2s linear forwards appearsR 6s;
 }
 
-aside::before, aside::after {
+aside::before, aside::after, #about h1::before, #about h1::after, #skill_h h1::before, #skill_h h1::after {
   display: inline-block;
   content: "";
   border-top: 1px solid white;
@@ -384,7 +369,7 @@ aside a {
 }
 
 aside a:hover {
-  color: #5858ffde;
+  color: var(--color_special_blue);
   text-shadow: 1px 1px 2px blue;
 }
 
@@ -393,23 +378,49 @@ aside a:hover {
   100% {opacity: 1;}
 }
 
-section div {
+section {
+  margin: 25vh auto;
+  padding: 10vh 0;
+}
+
+#about {
+  margin: 0 50% 0 10%;
+}
+
+#about h1 {
+  font-size: 2rem;
+}
+
+#about h1::before, #about h1::after {
+  margin: 0 10px 10px;
+}
+
+#about p {
+  font-size: 1.2rem;
+}
+
+.bolder {
+  font-weight: 600;
+}
+
+#blob  {
   overflow: hidden;
-  position: relative;
+  right: 0;
   width: 400px;
   height: 400px;
   margin-right: 10%;
-  background: linear-gradient(45deg, rgb(131, 131, 131), rgb(27, 27, 27));
+  background: linear-gradient(45deg, #727272, #303061);
   border-radius: 20% 80% 20% 80% / 80% 20% 80% 20% ;
   animation: 60s ease-in-out forwards spin2;
 }
+
 
 @keyframes spin2 {
   0% {transform: rotate(0deg);}
   100% {transform: rotate(360deg);}
 }
 
-section img {
+#a_propos img {
   width: 300px;
   animation: 60s ease-in-out forwards spin3;
 }
@@ -429,6 +440,65 @@ section img {
   background: transparent;
   border-radius: 20% 80% 20% 80% / 80% 20% 80% 20% ;
   box-shadow: 0 0 10px 1px #ffffff;
+  animation: 60s ease-in-out forwards spin2;
+}
+
+#competence p {
+  color: #ffffff61;
+}
+
+#skill_h h1::before, #skill_h h1::after {
+  margin: 0 10px 10px;
+}
+
+#skills {
+  gap: 2em;
+  justify-content: space-evenly;
+}
+
+
+#skills div div {
+  border-radius: 10px 10px;
+  width: 55%;
+  height: 20px;
+  background-color: #333333;
+  margin: 0 22.5%;
+  z-index: -1;
+}
+
+#skills img {
+  width: 10vw;
+  display: block;
+  margin: 10px auto;
+}
+
+#skills div div:last-child{
+  border-radius: 10px 5px 5px 10px;
+  height: 10px;
+  background-color: green;
+  box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+  margin: 0 25%;
+  transform: translate(0, -150%);
+}
+
+@keyframes progressD {
+  0% {width: 0px;}
+  100% {width: 12.5%;}
+}
+
+@keyframes progressI {
+  0% {width: 0px;}
+  100% {width: 25%;}
+}
+
+@keyframes progressA {
+  0% {width: 0px;}
+  100% {width: 37.5%;}
+}
+
+@keyframes progressE {
+  0% {width: 0px;}
+  100% {width: 50%;}
 }
 
 footer {
