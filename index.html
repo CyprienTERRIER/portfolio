@@ -11,7 +11,7 @@
     <link rel="icon" href="#" />
 </head>
 <body>
-    <!-- <div id="logo_box">
+    <div id="logo_box">
         <div id="logo_c">
         </div>
         <div id="hide">
@@ -24,7 +24,7 @@
         </div>
         <div class="lemon">
         </div>
-    </div> -->
+    </div>
     <header class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg">
             <h1 class="he-white ms-4 mb-0 align-self-start" id="name">Terrier <span class="bolder">Cyprien</span></h1>
@@ -39,19 +39,19 @@
                     <a class="nav-link he-white" href="#competence"><span>03.</span> Compétence</a>
                 </li>
                 <li class="nav-item me-3 li_left4">
-                    <a class="nav-link he-white" href="#"><span>04.</span> Formation</a>
+                    <a class="nav-link he-white" href="#formation"><span>04.</span> Formation</a>
                 </li>
                 <li class="nav-item me-3 li_left5">
-                    <a class="nav-link he-white" href="#"><span>05.</span> Contact</a>
+                    <a class="nav-link he-white" href="#contact"><span>05.</span> Contact</a>
                 </li>
             </ul>
           </nav>
     </header>
-    <main class="container-fluid he-white">
+    <main class="container-fluid he-white d-flex">
         <div class="p-5">
             <p class="mb-4">Bienvenue sur mon Portfolio !</p>
             <h1 class="mb-4 display-4 text-center">Je m'appelle <span class="text-bold display-2">Cyprien Terrier</span></h1>
-            <h2 class="mb-2 text-bold text-center h3">Je débute dans le Développement Web</h2>
+            <h2 class="mb-2 text-bold text-center h3 me-white">Je débute dans le Développement Web</h2>
             <div class="d-flex">
                 <p class="my-5 w-50">Je suis actuellement étudiant dans le domaine dans le domaine du <span class="bolder">Développement Web et Web Mobile</span>, domaine qui m'a toujours intrigué et intéressé. J'intègre un bachelor développement en 3e année avec un rythme d'alternance d'1 semaine école, 2 semaines entreprise.</p>
                 <a href="/image/TERRIER_Cyprien_CV.pdf"  class="btn btn-outline-secondary my-auto he-white" target="_blank">Voir mon CV</a>
@@ -61,8 +61,8 @@
     <aside class="position-fixed">
         <a href="mailto:cyprien.terrier07@gmail.com" class="he-white" target="_blank">cyprien.terrier07@gmail.com</a>
     </aside>
-    <section class="d-flex he-white" id="a_propos">
-        <div class="text-white pe-5 text-center" id="about">
+    <section class="container-fluid he-white d-flex position-relative" id="a_propos">
+        <div class="col-6 text-white text-center" id="about">
             <h1 class="mb-5"><span class="special_blue">02. </span> A Propos</h1>
             <p class="mb-0">Salut ! <span>Cyprien</span> Terrier pour vous servir!</p>
             <p>Comment allez vous ? Moi ? Super !</p>
@@ -79,7 +79,7 @@
         </div>
     </section>
     <section class="container-fluid he-white text-center" id="competence">
-        <div class="pb-5 me-5 mb-5" id="skill_h">
+        <div class="pb-5 me-5 mb-5" id="skill_title">
             <h1 ><span class="special_blue">03. </span>Compétence</h1>
             <p>Débutant &minus;&gt; Intermédiaire &minus;&gt; Avancé &minus;&gt; Expert</p>
         </div>  
@@ -140,7 +140,39 @@
             </div>
         </div>
     </section>
-    <footer></footer>
+    <section class="container-fluid he-white" id="formation">
+        <div class="pb-5 me-5 mb-5 text-center" id="formation_title">
+            <h1 ><span class="special_blue">04. </span>Formation</h1>
+        </div> 
+        <ul class="he-white">
+            <li>
+                <h1 class="d-flex">Bachelor Développement 3e année <span class="he-white">sept. 2022</span></h1>
+                <p class="le-white">EPSI, Lille</p>
+            </li>
+            <li>
+                <h1 class="d-flex">DWWM : Développeur Web - Web Mobile <span  class="he-white">janv. 2022 - Présent</span></h1>
+                <p class="le-white">EPSI, Lille</p>
+            </li>
+            <li>
+                <h1 class="d-flex">Baccalauréat Général <span  class="he-white">2018 - 2021</span></h1>
+                <p class="le-white">Lycée Faidherbe, Lille</p>
+            </li>
+        </ul>
+    </section>
+    <section class="container-fluid he-white text-center" id="contact">
+        <div class="mb-5" id="contact_title">
+            <h1 ><span class="special_blue">05. </span>Contact</h1>
+        </div>
+        <div>
+            <h1 class="he-white">Envie de me joindre ?</h1>
+            <p class="me-white">Je me ferais un grand plaisir de vous répondre dès que possible !</p>
+            <p class="le-white">Clique sur le bouton ci-dessous pour m'envoyer un mail !</p>
+            <a href="mailto:cyprien.terrier07@gmail.com" class="btn btn-outline-secondary he-white" target="_blank">Contactez moi !</a>
+        </div>
+    </section>
+    <footer>
+        <p class="me-white text-center">Site créé par Terrier Cyprien</p>
+    </footer>
     <script src="/js/jquery.slim.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/script.js"></script>

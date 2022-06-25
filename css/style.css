@@ -1,93 +1,36 @@
 :root {
-  --color_dark: #121212;
-  --color_whitey: #ffffffce;
+  --color_dark: #202020;
+  --color_darker: #121212;
   --color_special_blue: #8383ff;
+  --color_high_emphasis_white: #ffffffdb;
+  --color_medium_emphasis_white: #ffffff99;
+  --color_low_emphasis_white: #ffffff61;
 }
 
+/*#region Global Classes*/
 .he-white {
-  color: #ffffffde;
+  color: var(--color_high_emphasis_white)
 }
 
-body {
-  font-family: 'Playfair Display';
-  overflow: hidden;
-  background-color: var(--color_dark);
-  animation: .2s linear forwards bgcolor 4s;
+.me-white {
+  color: var(--color_medium_emphasis_white);
 }
 
-@keyframes bgcolor {
-  100% {background: #202020;}
+.le-white {
+  color: var(--color_low_emphasis_white);
 }
 
-#hide {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 150px;
-  height: 150px;
-  background-color: var(--color_dark);
-  transform: translate(17%,-50%) rotate(45deg);
+.text-bold {
+  font-weight: bold;
 }
 
-#logo_c {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    transform: translate(-50%,-50%);
-    box-shadow: 0 -50px 0 8px var(--color_dark), -75px -75px 0 8px var(--color_dark), -75px 75px 0 8px var(--color_dark), 50px 120px 0 8px var(--color_dark);
-    animation: .5s linear border forwards 1s, .5s ease-in-out click 2s forwards, .5s linear border_inverse forwards 3s;
+.bolder {
+  font-weight: 600;
 }
 
-@keyframes border{
-    0% {
-      box-shadow: 0 -50px 0 8px var(--color_dark), -75px -75px 0 8px var(--color_dark), -75px 75px 0 8px var(--color_dark), 50px 120px 0 8px var(--color_dark), 0 0 0 25px var(--color_whitey), 0 0 10px 28px var(--color_whitey);
-    }
-    25% {
-      box-shadow: -75px -75px 0 8px var(--color_dark), -75px -75px 0 8px var(--color_dark), -75px 75px 0 8px var(--color_dark), 50px 120px 0 8px var(--color_dark), 0 0 0 25px var(--color_whitey), 0 0 10px 28px var(--color_whitey);
-    }
-    50% {
-      box-shadow: -75px 75px 0 8px var(--color_dark), -75px 75px 0 8px var(--color_dark), -75px 75px 0 8px var(--color_dark), 50px 120px 0 8px var(--color_dark), 0 0 0 25px var(--color_whitey), 0 0 10px 28px var(--color_whitey);
-    }
-    75% {
-      box-shadow: 50px 120px 0 8px var(--color_dark), 50px 120px 0 8px var(--color_dark), 50px 120px 0 8px var(--color_dark), 50px 120px 0 8px var(--color_dark), 0 0 0 25px var(--color_whitey), 0 0 10px 28px var(--color_whitey);
-    }
-    100% {
-      box-shadow: 164px 0 0 8px var(--color_dark), 164px 0 0 8px var(--color_dark), 164px 0 0 8px var(--color_dark), 164px 0 0 8px var(--color_dark), 0 0 0 25px var(--color_whitey), 0 0 10px 28px var(--color_whitey); 
-    }
-}
+/*#endregion*/
 
-@keyframes click {
-    0% {
-        width: 150px; height: 150px;
-    } 
-    50% {
-        width: 140px; height: 140px;
-    }
-    100% {
-        width: 150px; height: 150px;
-    }
-}
-
-@keyframes border_inverse{
-  0% {
-    box-shadow: 100px 0  0 8px var(--color_dark), 100px 0 0 8px var(--color_dark), 100px 0 0 8px var(--color_dark), 100px 0 0 8px var(--color_dark), 0 0 0 25px var(--color_whitey), 0 0 10px 28px var(--color_whitey);
-  }  25% {
-    box-shadow: 75px -75px 0 8px var(--color_dark), 75px -75px 0 8px var(--color_dark), 75px -75px 0 8px var(--color_dark), 75px -75px 0 8px var(--color_dark), 0 0 0 25px var(--color_whitey), 0 0 10px 28px var(--color_whitey);
-  }
-  50% {
-    box-shadow: 75px -75px 0 8px var(--color_dark), -75px -75px 0 8px var(--color_dark), -75px -75px 0 8px var(--color_dark), -75px -75px 0 8px var(--color_dark), 0 0 0 25px var(--color_whitey), 0 0 10px 28px var(--color_whitey);
-  }
-  75% {
-    box-shadow: 75px -75px 0 8px var(--color_dark), -75px -75px 0 8px var(--color_dark), -75px 75px 0 8px var(--color_dark), -75px 75px 8px var(--color_dark), 0 0 0 25px var(--color_whitey), 0 0 10px 28px var(--color_whitey);
-  }
-  100% {
-    box-shadow: 75px -75px  0 8px var(--color_dark), -75px -75px 0 8px var(--color_dark), -75px 75px 0 8px var(--color_dark), 75px 75px 0 8px var(--color_dark), 0 0 0 25px var(--color_whitey), 0 0 10px 28px var(--color_whitey); 
-  }
-}
-
+/*#region Loading Page => Geometric Shapes */
 .losange {
   width: 150px;
   aspect-ratio: 1;
@@ -101,9 +44,17 @@ body {
 }
 
 @keyframes straight {
-  0% {opacity: 0.2; transform: rotate(0); left: -50%;}
+  0% {
+    opacity: 0.2;
+    transform: rotate(0); 
+    left: -50%;
+  }
 
-  100% {opacity: 1; transform: rotate(360deg); left: 100%;}
+  100% {
+    opacity: 1; 
+    transform: rotate(360deg); 
+    left: 100%;
+  }
 }
 
 .triangle {
@@ -132,11 +83,18 @@ body {
   left: 0;
 }
 
-
 @keyframes straight2 {
-  0% {opacity: 0.2; transform: rotate(0); right: -50%;}
+  0% {
+    opacity: 0.2; 
+    transform: rotate(0);
+    right: -50%;
+  }
 
-  100% {opacity: 1; transform: rotate(720deg); right: 100%; }
+  100% {
+    opacity: 1; 
+    transform: rotate(720deg); 
+    right: 100%; 
+  }
 }
 
 .circle {
@@ -152,13 +110,26 @@ body {
   animation: 3.5s linear forwards spin  
 }
 
-
 @keyframes spin {
-  0% {opacity: 0.2; transform: rotate(0); top: -50%; left: 15%}
+  0% {
+    opacity: 0.2; 
+    transform: rotate(0); 
+    top: -50%; 
+    left: 15%
+  }
 
-  50% {transform: rotate(240deg); top: 30%; left: 15%}
+  50% {
+    transform: rotate(240deg); 
+    top: 30%; 
+    left: 15%
+  }
 
-  100% {opacity: 1; transform: rotate(-480deg); top: 95%; left: 95%}
+  100% {
+    opacity: 1; 
+    transform: rotate(-480deg); 
+    top: 95%; 
+    left: 95%
+  }
 }
 
 .lemon {
@@ -174,12 +145,166 @@ body {
 }
 
 @keyframes thunder {
-  0% {bottom: -50%; right: 40%; transform: rotate(0); opacity: 1;}
-  33% {bottom: 70%; right: 5%;}
-  66% {bottom: 10%; right: 85%;}
-  100% {bottom: 100%; right: 70%; transform: rotate(720deg); opacity: 1;}
+  0% {
+    bottom: -50%; 
+    right: 40%; 
+    transform: rotate(0);
+    opacity: 1;
+    }
+  33% {
+    bottom: 70%; 
+    right: 5%;
+  }
+  66% {
+    bottom: 10%; 
+    right: 85%;
+  }
+  100% {
+    bottom: 100%; 
+    right: 70%; 
+    transform: rotate(720deg); 
+    opacity: 1;
+  }
+}
+/*#endregion */
+
+body {
+  font-family: 'Playfair Display';
+  overflow: hidden;
+  background-color: var(--color_darker);
+  animation: .2s linear forwards bgcolor 4s;
 }
 
+main h1, main h2, #a_propos h1, #competence h1, #formation h1, #contact h1 {
+  font-family: 'Playfair Display', sans-serif;
+}
+
+@keyframes bgcolor {
+  100% {
+    background: var(--color_dark);
+  }
+}
+
+span {
+  color: var(--color_special_blue);
+  text-shadow: 1px 1px 2px blue;
+}
+
+/* Add 2 white lines before and after the element */
+aside::before, aside::after, 
+#about h1::before, #about h1::after, 
+#skill_title h1::before, #skill_title h1::after, 
+#formation_title h1::before, #formation_title h1::after, 
+#contact_title h1::before, #contact_title h1::after {
+  display: inline-block;
+  content: "";
+  border-top: 1px solid white;
+  width: 5rem;
+  margin: 0 10px;
+}
+
+/* Centers the lines */
+#about h1::before, #about h1::after, 
+#skill_title h1::before, #skill_title h1::after, 
+#formation_title h1:before, #formation_title h1:after, 
+#contact_title h1::before, #contact_title h1::after{
+  margin: 0 10px 10px;
+}
+
+/*#region ScrollBar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(125, 125, 126); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #444;
+}
+/*#endregion*/
+
+/*#region Logo C */
+#hide {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  background-color: var(--color_darker);
+  transform: translate(17%,-50%) rotate(45deg);
+}
+
+#logo_c {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 -50px 0 8px var(--color_darker), -75px -75px 0 8px var(--color_darker), -75px 75px 0 8px var(--color_darker), 50px 120px 0 8px var(--color_darker);
+    animation: .5s linear border forwards 1s, .5s ease-in-out click 2s forwards, .5s linear border_inverse forwards 3s;
+}
+
+@keyframes border{
+    0% {
+      box-shadow: 0 -50px 0 8px var(--color_darker), -75px -75px 0 8px var(--color_darker), -75px 75px 0 8px var(--color_darker), 50px 120px 0 8px var(--color_darker), 0 0 0 25px var(--color_high_emphasis_white), 0 0 10px 28px var(--color_high_emphasis_white);
+    }
+    25% {
+      box-shadow: -75px -75px 0 8px var(--color_darker), -75px -75px 0 8px var(--color_darker), -75px 75px 0 8px var(--color_darker), 50px 120px 0 8px var(--color_darker), 0 0 0 25px var(--color_high_emphasis_white), 0 0 10px 28px var(--color_high_emphasis_white);
+    }
+    50% {
+      box-shadow: -75px 75px 0 8px var(--color_darker), -75px 75px 0 8px var(--color_darker), -75px 75px 0 8px var(--color_darker), 50px 120px 0 8px var(--color_darker), 0 0 0 25px var(--color_high_emphasis_white), 0 0 10px 28px var(--color_high_emphasis_white);
+    }
+    75% {
+      box-shadow: 50px 120px 0 8px var(--color_darker), 50px 120px 0 8px var(--color_darker), 50px 120px 0 8px var(--color_darker), 50px 120px 0 8px var(--color_darker), 0 0 0 25px var(--color_high_emphasis_white), 0 0 10px 28px var(--color_high_emphasis_white);
+    }
+    100% {
+      box-shadow: 164px 0 0 8px var(--color_darker), 164px 0 0 8px var(--color_darker), 164px 0 0 8px var(--color_darker), 164px 0 0 8px var(--color_darker), 0 0 0 25px var(--color_high_emphasis_white), 0 0 10px 28px var(--color_high_emphasis_white); 
+    }
+}
+
+@keyframes click {
+    0% {
+        width: 150px; height: 150px;
+    } 
+    50% {
+        width: 140px; height: 140px;
+    }
+    100% {
+        width: 150px; height: 150px;
+    }
+}
+
+@keyframes border_inverse{
+  0% {
+    box-shadow: 100px 0  0 8px var(--color_darker), 100px 0 0 8px var(--color_darker), 100px 0 0 8px var(--color_darker), 100px 0 0 8px var(--color_darker), 0 0 0 25px var(--color_high_emphasis_white), 0 0 10px 28px var(--color_high_emphasis_white);
+  }  25% {
+    box-shadow: 75px -75px 0 8px var(--color_darker), 75px -75px 0 8px var(--color_darker), 75px -75px 0 8px var(--color_darker), 75px -75px 0 8px var(--color_darker), 0 0 0 25px var(--color_high_emphasis_white), 0 0 10px 28px var(--color_high_emphasis_white);
+  }
+  50% {
+    box-shadow: 75px -75px 0 8px var(--color_darker), -75px -75px 0 8px var(--color_darker), -75px -75px 0 8px var(--color_darker), -75px -75px 0 8px var(--color_darker), 0 0 0 25px var(--color_high_emphasis_white), 0 0 10px 28px var(--color_high_emphasis_white);
+  }
+  75% {
+    box-shadow: 75px -75px 0 8px var(--color_darker), -75px -75px 0 8px var(--color_darker), -75px 75px 0 8px var(--color_darker), -75px 75px 8px var(--color_darker), 0 0 0 25px var(--color_high_emphasis_white), 0 0 10px 28px var(--color_high_emphasis_white);
+  }
+  100% {
+    box-shadow: 75px -75px  0 8px var(--color_darker), -75px -75px 0 8px var(--color_darker), -75px 75px 0 8px var(--color_darker), 75px 75px 0 8px var(--color_darker), 0 0 0 25px var(--color_high_emphasis_white), 0 0 10px 28px var(--color_high_emphasis_white); 
+  }
+}
+/*#endregion*/
+
+/*#region Header */
 header {
   position: fixed;
   top: 0;
@@ -194,43 +319,34 @@ header {
 .scroll-up {
   transform: translate(0, 0);
 }
-nav {
-  opacity: 0;
-  background-color: #181818;
-  box-shadow: 0 1px 10px 1px #161616;
-  animation: .1s linear forwards appearsH 4.5s;
-}
-
-@keyframes appearsH {
-  0% {opacity: 0;}
-  100% {opacity: 0.9;}
-}
-
-nav h1 {
-  text-shadow: 1px 1px 2px white;
-}
-
-span {
-  color: #8383ff;
-  text-shadow: 1px 1px 2px blue;
-}
 
 #name {
+  text-shadow: 1px 1px 2px white;
   opacity: 0;
   font-size: 1.5rem;
   animation: 1s linear forwards pop 4.7s;
 }
 
 @keyframes pop {
-  0% {opacity: 0; font-size: 0;}
-  100% {opacity: 1; font-size: 1.5rem;}
+  100% {
+    opacity: 1;
+  }
 }
 
-li {
-  position: relative;
+nav {
+  opacity: 0;
+  background-color: #181818;
+  box-shadow: 0 1px 10px 1px #161616;
+  animation: .1s linear forwards appears 4.5s;
 }
 
-li::after {
+@keyframes appears {
+  100% {
+    opacity: 0.9;
+  }
+}
+
+nav li::after {
   content: '';
   display: block;
   width: 60%;
@@ -242,8 +358,8 @@ li::after {
   transition: transform ease-in-out 250ms;
 }
 
-li:hover::after {
-  transform: scale(1);
+nav li:hover::after {
+  transform: scale(1,1);
 }
 
 .nav-link:hover {
@@ -253,64 +369,66 @@ li:hover::after {
 
 .li_left {
   opacity: 0;
-  animation: .5s linear forwards appearsL 4.7s;
+  animation: .5s linear forwards appearsLeft 4.7s;
 }
 
 .li_left2 {
   opacity: 0;
-  animation: .5s linear forwards appearsL 4.9s;
+  animation: .5s linear forwards appearsLeft 4.9s;
 }
 
 .li_left3 {
   opacity: 0;
-  animation: .5s linear forwards appearsL 5.1s;
+  animation: .5s linear forwards appearsLeft 5.1s;
 }
 
 .li_left4 {
   opacity: 0;
-  animation: .5s linear forwards appearsL 5.3s;
+  animation: .5s linear forwards appearsLeft 5.3s;
 }
 
 .li_left5 {
   opacity: 0;
-  animation: .5s linear forwards appearsL 5.5s;
+  animation: .5s linear forwards appearsLeft 5.5s;
 }
 
-@keyframes appearsL {
-  0% {opacity: 0; transform: translate(-20%,0);}
-  100% {opacity: 1; transform: translate(0,0);}
+@keyframes appearsLeft {
+  0% {
+    opacity: 0; 
+    transform: translate(-20%,0);
+  }
+  100% {
+    opacity: 1; 
+    transform: translate(0,0);
+  }
 }
+/*#endregion*/
 
+/*#region Main */
 main {
   max-width: 1300px;
-  margin: 25vh auto 35vh auto;
+  height: 100vh;
   opacity: 0;
-  animation: 2s linear forwards appearsD 6s;
+  animation: 2s linear forwards appearsDown 6s;
 }
 
-@keyframes appearsD {
-  0% {opacity: 0; transform: translate(0,20%);}
-  100% {opacity: 1; transform: translate(0,0);}
-}
+@keyframes appearsDown {
+  0% {
+    opacity: 0; 
+    transform: translate(0,20%);
+  }
 
+  100% {
+    opacity: 1; 
+    transform: translate(0,0);
+  }
+}
 
 main div:first-child {
-  margin: 5% 10% 5% 5%;
-  box-shadow: 10px 10px 10px 1px #121212;
+  margin: auto 7.5% auto 5%;
+  box-shadow: 10px 10px 10px 1px var(--color_darker);
   background-color: #191919;
   border-radius: 10% 0 10% 0;
-}
-
-main h1, main h2, #about h1, #competence h1 {
-  font-family: 'Playfair Display', sans-serif;
-}
-
-.text-bold {
-  font-weight: bold;
-}
-
-main h2 {
-  color: rgba(255, 255, 255, 0.6);
 }
 
 main p:last-child {
@@ -322,45 +440,15 @@ main a {
   margin-left: auto;
   margin-right: 10%;
 }
+/*#endregion */
 
-/* width */
-::-webkit-scrollbar {
-  width: 8px;
-}
-/* Track */
-::-webkit-scrollbar-track {
-  background: transparent; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(125, 125, 126); 
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-::-webkit-scrollbar-thumb:active {
-  background: #444;
-}
-
+/*#region Aside */
 aside {
   top: 50%;
   right: 0;
   opacity: 0;
   transform: translate(40%,0) rotate(90deg);
-  animation: 2s linear forwards appearsR 6s;
-}
-
-aside::before, aside::after, #about h1::before, #about h1::after, #skill_h h1::before, #skill_h h1::after {
-  display: inline-block;
-  content: "";
-  border-top: 1px solid white;
-  width: 5rem;
-  margin: 0 10px;
+  animation: 2s linear forwards appears 6s;
 }
 
 aside a {
@@ -372,43 +460,53 @@ aside a:hover {
   color: var(--color_special_blue);
   text-shadow: 1px 1px 2px blue;
 }
+/*#endregion */
 
-@keyframes appearsR {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
-
+/* 
 section {
   margin: 25vh auto;
   padding: 10vh 0;
+} */
+
+/*#region Section About*/
+#a_propos {
+  width: 100%;
+  height: 100vh;
 }
 
 #about {
-  margin: 0 50% 0 10%;
+  margin: auto auto auto 10%;
 }
 
 #about h1 {
   font-size: 2rem;
 }
 
-#about h1::before, #about h1::after {
-  margin: 0 10px 10px;
-}
-
 #about p {
   font-size: 1.2rem;
 }
 
-.bolder {
-  font-weight: 600;
+#shadow {
+  z-index: -1000;
+  top: 27%;
+  right: 0;
+  width: 20%;
+  aspect-ratio: 1;
+  margin-top: 2%;
+  margin-right: 8%;
+  background: transparent;
+  border-radius: 20% 80% 20% 80% / 80% 20% 80% 20% ;
+  box-shadow: 0 0 10px 1px #ffffff;
+  animation: 60s ease-in-out forwards spin2;
 }
 
 #blob  {
   overflow: hidden;
+  top: 27%;
   right: 0;
-  width: 400px;
-  height: 400px;
-  margin-right: 10%;
+  width: 20%;
+  aspect-ratio: 1;
+  margin: auto 10% auto auto;
   background: linear-gradient(45deg, #727272, #303061);
   border-radius: 20% 80% 20% 80% / 80% 20% 80% 20% ;
   animation: 60s ease-in-out forwards spin2;
@@ -421,7 +519,7 @@ section {
 }
 
 #a_propos img {
-  width: 300px;
+  width: 80%;
   animation: 60s ease-in-out forwards spin3;
 }
 
@@ -429,26 +527,10 @@ section {
   0% {transform: rotate(0deg);}
   100% {transform: rotate(-360deg);}
 }
-
-#shadow {
-  right: 0;
-  z-index: -1000;
-  width: 400px;
-  height: 400px;
-  margin-top: 2%;
-  margin-right: 8%;
-  background: transparent;
-  border-radius: 20% 80% 20% 80% / 80% 20% 80% 20% ;
-  box-shadow: 0 0 10px 1px #ffffff;
-  animation: 60s ease-in-out forwards spin2;
-}
+/*#endregion*/
 
 #competence p {
   color: #ffffff61;
-}
-
-#skill_h h1::before, #skill_h h1::after {
-  margin: 0 10px 10px;
 }
 
 #skills {
@@ -459,10 +541,10 @@ section {
 
 #skills div div {
   border-radius: 10px 10px;
-  width: 55%;
+  width: 54%;
   height: 20px;
   background-color: #333333;
-  margin: 0 22.5%;
+  margin: 0 auto;
   z-index: -1;
 }
 
@@ -501,8 +583,40 @@ section {
   100% {width: 50%;}
 }
 
-footer {
-  width: 100%;
-  height: 1000px;
-  background-color: rgba(255, 0, 0, 0.219);
+#formation :not(:first-child) h1{
+  font-size: 1.5rem;
+  justify-content: space-between;
 }
+
+#formation ul{
+  padding: 0;
+  margin: 0 10%;
+  list-style: none
+}
+
+#contact {
+  width: 50%;
+  border-radius: 10px;
+  background-color: #202020;
+  transform: translate(-30px, 30px); 
+  box-shadow: 0 0 0 0 white;
+  animation: 2s ease forwards popout;
+/*   
+  border-top: 5px solid rgb(56, 56, 56);
+  border-bottom: 5px solid rgb(56, 56, 56);
+  border-left: 5px solid rgb(88, 88, 88);
+  border-right: 5px solid rgb(27, 27, 27); */
+}
+
+@keyframes popout {
+  0% {
+    transform: translate(-30px, 30px); 
+    box-shadow: -2px 1px 1px 1px rgb(75, 75, 75), -2px 2px 1px 1px white, -50px 50px 100px 10px black;
+  }
+  100% {
+    background-color: rgb(37, 37, 37);
+    transform: translate(20px,-20px); 
+    box-shadow: -2px 1px 1px 1px rgb(75, 75, 75), -50px 50px 10px 1px white, -50px 50px 100px 10px black; 
+  }
+}
+
