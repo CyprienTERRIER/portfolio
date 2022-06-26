@@ -25,20 +25,41 @@ window.addEventListener("scroll", () => {
 });
 /*#endregion */
 
-/*#region When the page is ready, remove the C animation */
-function addDnone() {
-  $('#logo_box').addClass('d-none')
-};
-
-function addVisible() {
-  $('body').css("overflow", "visible")
-};
-
+/*#region When the page is ready, remove the C animation, scroll to the top, makes the sections in the body disappear then do a loop about giving the sections an animatino to appear*/
 $(document).ready(
-  setTimeout(addDnone, 3800),
-  setTimeout(addVisible, 5000),
+  setTimeout(() => {
+    $('#logo_box').addClass('d-none')
+  }, 3800),
+  setTimeout(() => {
+    $('body').css("overflow", "visible")
+  }, 5000),
   $(this).scrollTop(0),
-);
+  () => { 
+    for (let index = 0; index < $('section').length; index++) {
+      if (window.pageYOffset == 0) {
+        $('section')[index].style.animation = ''
+        $('section')[3].children[0].style.animation = ''
+      }
+    }
+  },
+  setTimeout(() => {
+    for (let index = 0; index < $('section').length; index++) {
+      window.addEventListener('scroll', () => {
+        var heightY = window.innerHeight
+        var SectionHeightY = $('section')[index].getBoundingClientRect().top
+        if ((heightY - SectionHeightY) > 0) {
+          if ($('section')[index] == $('section')[3]) {
+            $('section')[3].style.animation = '1s linear forwards appears .5s'
+            $('section')[3].children[0].style.animation = '2s ease forwards popout 1.5s'
+          }
+          else {
+            $('section')[index].style.animation = '2s linear forwards appearsDown .5s'
+          }
+        }
+      })
+    }
+  }, 2000)
+)
 /*#endregion */
 
 /*#region As the level of skills increases, so do the progress bars */
@@ -72,23 +93,6 @@ window.addEventListener('mousemove', mousemove);
 /*#endregion */
 
 /*#region When you scroll down, the elements appears*/
-for (let index = 0; index < $('section').length; index++) {
-  window.addEventListener('scroll', () => {
-    var heightY = window.innerHeight
-    var SectionHeightY = $('section')[index].getBoundingClientRect().top
-    if (window.pageYOffset == 0) {
-      $('section')[index].style.animation = ''
-      $('section')[3].children[0].style.animation = ''
-    }
-    if ((heightY - SectionHeightY) > 0) {
-      if ($('section')[index] == $('section')[3]) {
-        $('section')[3].style.animation = '1s linear forwards appears .5s'
-        $('section')[3].children[0].style.animation = '2s ease forwards popout 1.5s'
-      }
-      else {
-        $('section')[index].style.animation = '2s linear forwards appearsDown .5s'
-      }
-    }
-  })
+function def() {
 }
 /*#endregion */
