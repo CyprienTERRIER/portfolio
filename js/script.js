@@ -1,3 +1,4 @@
+/*#region On scroll up or down, hide or show the header */
 const header = $("header");
 const scrollUp = "scroll-up";
 const scrollDown = "scroll-down";
@@ -22,23 +23,25 @@ window.addEventListener("scroll", () => {
   }
   lastScroll = currentScroll;
 });
+/*#endregion */
 
-$(document).ready(
-  $('#logo_box').removeClass('d-none'),
-  setTimeout(addDnone, 4000), 
-  $(this).scrollTop(0),
-  header.removeClass(scrollDown), 
-  setTimeout(addVisible, 5000)
-  );
-
+/*#region When the page is ready, remove the C animation */
 function addDnone() {
-    $('#logo_box').addClass('d-none')
+  $('#logo_box').addClass('d-none')
 };
 
 function addVisible() {
-    $('body').css("overflow", "visible")
+  $('body').css("overflow", "visible")
 };
 
+$(document).ready(
+  setTimeout(addDnone, 3800),
+  setTimeout(addVisible, 5000),
+  $(this).scrollTop(0),
+);
+/*#endregion */
+
+/*#region As the level of skills increases, so do the progress bars */
 var divSkills = $('#skills').children()
 for (let index = 0; index < divSkills.length; index++) {
   if (divSkills[index].children[1].textContent == 'Débutant') {
@@ -55,19 +58,37 @@ for (let index = 0; index < divSkills.length; index++) {
     divSkills[index].children[3].style.borderRadius = '10px'
   }
 }
+/*#endregion */
 
-// var aboutDiv = $('#a_propos')[0]
-// aboutDiv.style.animation = null
-// window.addEventListener('scroll', () => {
-//   var heightY = window.innerHeight
-//   var aboutHeightY = $('#a_propos')[0].getBoundingClientRect().top
-//   if ((heightY - aboutHeightY) > 0) {
-//     console.log ((heightY - aboutHeightY))
-//     aboutDiv.style.animation = '1s linear forwards appearsD'
-//   }
-//   else {
-//     aboutDiv.style.animation = '1s linear forwards disappears'
-//   }
-// })
+/*#region When the mouse is on the top of the page, show the header */
+var headerSizeY = $('header')[0].clientHeight
+function mousemove(event){
+  if (event.clientY < headerSizeY) {
+    header.removeClass(scrollDown);
+    header.addClass(scrollUp);
+  }
+}
+window.addEventListener('mousemove', mousemove);
+/*#endregion */
 
-/*show the header when the mouse is on the top*/
+/*#region When you scroll down, the elements appears*/
+for (let index = 0; index < $('section').length; index++) {
+  window.addEventListener('scroll', () => {
+    var heightY = window.innerHeight
+    var SectionHeightY = $('section')[index].getBoundingClientRect().top
+    if (window.pageYOffset == 0) {
+      $('section')[index].style.animation = ''
+      $('section')[3].children[0].style.animation = ''
+    }
+    if ((heightY - SectionHeightY) > 0) {
+      if ($('section')[index] == $('section')[3]) {
+        $('section')[3].style.animation = '1s linear forwards appears .5s'
+        $('section')[3].children[0].style.animation = '2s ease forwards popout 1.5s'
+      }
+      else {
+        $('section')[index].style.animation = '2s linear forwards appearsDown .5s'
+      }
+    }
+  })
+}
+/*#endregion */
