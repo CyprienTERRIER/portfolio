@@ -316,6 +316,12 @@ header {
   top: 0;
   z-index: 100;
   transition: .5s ease-in-out;
+  box-shadow: 0 5px 10px 1px #161616 ;
+  background-color: var(--color_darker);
+}
+
+header a {
+  text-decoration: none;
 }
 
 .scroll-down {
@@ -327,50 +333,21 @@ header {
 }
 
 #name {
+  opacity: 0;
+  font-size: 100%;
+  align-self: center;
   text-shadow: 1px 1px 2px white;
-  opacity: 0;
-  font-size: 1.5rem;
-  animation: 1s linear forwards pop 4.7s;
+  animation: 1s linear forwards appears 4.7s;
 }
 
-@keyframes pop {
-  100% {
-    opacity: 1;
-  }
-}
-
-nav {
-  opacity: 0;
-  background-color: #181818;
-  box-shadow: 0 1px 10px 1px #161616;
-  animation: .1s linear forwards appears 4.5s;
+#name a:hover {
+  color: white;
 }
 
 @keyframes appears {
   100% {
-    opacity: 0.9;
+    opacity: 1;
   }
-}
-
-nav li::after {
-  content: '';
-  display: block;
-  width: 60%;
-  height: 2px;
-  margin: auto;
-  background-color: white;
-  transform: scale(0,1);
-  transform-origin: left;
-  transition: transform ease-in-out 250ms;
-}
-
-nav li:hover::after {
-  transform: scale(1,1);
-}
-
-.nav-link:hover {
-  color: var(--color_special_blue);
-  text-shadow: 1px 1px 2px blue;
 }
 
 .li_left {
@@ -396,6 +373,118 @@ nav li:hover::after {
 .li_left5 {
   opacity: 0;
   animation: .5s linear forwards appearsLeft 5.5s;
+}
+
+@media screen and (min-width: 993px) {
+  .collapse:not(.show) {
+    display: block;
+  }
+
+  header  {
+    opacity: 0.9;
+  }
+
+  header ul > li {
+    list-style: none;
+    padding: 5px;
+  }
+
+  header ul a {
+    padding: 10px;
+    padding-bottom: 50%;
+  }
+
+  header li::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 2px;
+    margin: 10px auto;
+    background-color: white;
+    transform: scale(0,1);
+    transform-origin: left;
+    transition: transform ease-in-out .25s;
+  }
+
+  header li:hover::after {
+    transform: scale(1,1);
+  }
+
+  header ul a:hover {
+  color: var(--color_special_blue);
+  text-shadow: 1px 1px 2px blue;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: white;
+    height: 4px;
+    width: 30px;
+    transition: transform .4s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+
+  .menu-button::after {
+    content: '';
+    margin-top: 12px;
+  }
+
+  .menu-button-anim::before{
+    margin-top: 0;
+    transform: rotate(405deg);
+  }
+
+  .menu-button-anim {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  .menu-button-anim::after{
+    margin-top: -4px;
+    transform: rotate(-405deg);
+  }
+
+  header ul > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: .5em 0;
+    width: 100%;
+    color: white;
+  }
+
+  .li_left {
+    opacity: 0;
+    animation: .5s linear forwards appearsLeft 0.1s;
+  }
+  
+  .li_left2 {
+    opacity: 0;
+    animation: .5s linear forwards appearsLeft 0.3s;
+  }
+  
+  .li_left3 {
+    opacity: 0;
+    animation: .5s linear forwards appearsLeft 0.5s;
+  }
+  
+  .li_left4 {
+    opacity: 0;
+    animation: .5s linear forwards appearsLeft 0.7s;
+  }
+  
+  .li_left5 {
+    opacity: 0;
+    animation: .5s linear forwards appearsLeft 0.9s;
+  }
 }
 
 @keyframes appearsLeft {

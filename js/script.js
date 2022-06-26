@@ -25,11 +25,22 @@ window.addEventListener("scroll", () => {
 });
 /*#endregion */
 
+/*#region When the mouse is on the top of the page, show the header */
+var headerSizeY = $('header')[0].clientHeight
+function mousemove(event){
+  if (event.clientY < headerSizeY) {
+    header.removeClass(scrollDown);
+    header.addClass(scrollUp);
+  }
+}
+window.addEventListener('mousemove', mousemove);
+/*#endregion */
+
 /*#region When the page is ready, remove the C animation, scroll to the top, makes the sections in the body disappear then do a loop about giving the sections an animatino to appear*/
 $(document).ready(
   setTimeout(() => {
     $('#logo_box').addClass('d-none')
-  }, 3800),
+  }, 4200),
   setTimeout(() => {
     $('body').css("overflow", "visible")
   }, 5000),
@@ -81,18 +92,17 @@ for (let index = 0; index < divSkills.length; index++) {
 }
 /*#endregion */
 
-/*#region When the mouse is on the top of the page, show the header */
-var headerSizeY = $('header')[0].clientHeight
-function mousemove(event){
-  if (event.clientY < headerSizeY) {
-    header.removeClass(scrollDown);
-    header.addClass(scrollUp);
-  }
-}
-window.addEventListener('mousemove', mousemove);
-/*#endregion */
-
 /*#region When you scroll down, the elements appears*/
 function def() {
 }
 /*#endregion */
+
+
+addAnim = () => {
+  if ($('.menu-button').hasClass('menu-button-anim')) {
+    $('.menu-button').removeClass('menu-button-anim')
+  }
+  else {
+    $('.menu-button').addClass('menu-button-anim')
+  }
+}
