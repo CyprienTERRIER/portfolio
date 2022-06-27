@@ -1,3 +1,4 @@
+/*#region Global style */
 :root {
   --color_dark: #202020;
   --color_darker: #121212;
@@ -6,6 +7,50 @@
   --color_medium_emphasis_white: #ffffff99;
   --color_low_emphasis_white: #ffffff61;
 }
+
+body {
+  font-family: 'Playfair Display';
+  overflow: hidden;
+  background: var(--color_dark);
+}
+
+main h1, main h2, #a_propos h1, #competence h1, #formation h1, #contact h1 {
+  font-family: 'Playfair Display', sans-serif;
+}
+
+span {
+  color: var(--color_special_blue);
+  text-shadow: 1px 1px 2px blue;
+}
+
+/* Add 2 white lines before and after the element */
+aside::before, aside::after, 
+#about h1::before, #about h1::after, 
+#skill_title h1::before, #skill_title h1::after, 
+#formation_title::before, #formation_title::after, 
+#contact_title::before, #contact_title::after {
+  display: inline-block;
+  content: "";
+  border-top: 1px solid white;
+  width: 5rem;
+  margin: 0 10px;
+}
+
+/* Centers the lines */
+#about h1::before, #about h1::after, 
+#skill_title h1::before, #skill_title h1::after, 
+#formation_title::before, #formation_title::after, 
+#contact_title::before, #contact_title::after{
+  margin: 0 10px 10px;
+}
+
+main, section {
+  width: 100%;
+  min-height: 100vh;
+  opacity: 0;
+  padding: 100px 0;
+}
+/*#endregion */
 
 /*#region Global Classes*/
 .he-white {
@@ -175,48 +220,6 @@
   }
 }
 /*#endregion */
-body {
-  font-family: 'Playfair Display';
-  overflow: hidden;
-  background: var(--color_dark);
-}
-
-main h1, main h2, #a_propos h1, #competence h1, #formation h1, #contact h1 {
-  font-family: 'Playfair Display', sans-serif;
-}
-
-span {
-  color: var(--color_special_blue);
-  text-shadow: 1px 1px 2px blue;
-}
-
-/* Add 2 white lines before and after the element */
-aside::before, aside::after, 
-#about h1::before, #about h1::after, 
-#skill_title h1::before, #skill_title h1::after, 
-#formation_title::before, #formation_title::after, 
-#contact_title::before, #contact_title::after {
-  display: inline-block;
-  content: "";
-  border-top: 1px solid white;
-  width: 5rem;
-  margin: 0 10px;
-}
-
-/* Centers the lines */
-#about h1::before, #about h1::after, 
-#skill_title h1::before, #skill_title h1::after, 
-#formation_title::before, #formation_title::after, 
-#contact_title::before, #contact_title::after{
-  margin: 0 10px 10px;
-}
-
-main, section {
-  width: 100%;
-  min-height: 100vh;
-  opacity: 0;
-  padding: 100px 0;
-}
 
 /*#region ScrollBar */
 ::-webkit-scrollbar {
