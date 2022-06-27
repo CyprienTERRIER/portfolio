@@ -64,7 +64,7 @@ $(document).ready(
             $('section')[3].children[0].style.animation = '2s ease forwards popout 1.5s'
           }
           else {
-            $('section')[index].style.animation = '2s linear forwards appearsDown .5s'
+            $('section')[index].style.animation = '1s linear forwards appearsDown .5s'
           }
         }
       })
@@ -97,7 +97,7 @@ function def() {
 }
 /*#endregion */
 
-
+/*#region Menu Burger Animation + Clic*/
 addAnim = () => {
   if ($('.menu-button').hasClass('menu-button-anim')) {
     $('.menu-button').removeClass('menu-button-anim')
@@ -105,4 +105,8 @@ addAnim = () => {
   else {
     $('.menu-button').addClass('menu-button-anim')
   }
+};
+
+function clickBurger() {
+  $('.menu-button').click()
 }

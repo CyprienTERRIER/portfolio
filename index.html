@@ -11,16 +11,16 @@
     <link rel="icon" href="#" />
 </head>
 <body>
-    <div class="position-fixed" id="logo_box">
-        <div id="logo_c">
+    <div class="position-fixed top-0" id="logo_box">
+        <div class="translate-middle start-50 top-50 rounded-circle" id="logo_c">
         </div>
-        <div id="hide">
+        <div class="start-50 top-50" id="hide">
         </div>
         <div class="losange">
         </div>
         <div class="triangle">
         </div>
-        <div class="circle">
+        <div class="circle rounded-circle">
         </div>
         <div class="lemon">
         </div>
@@ -28,47 +28,47 @@
     <header class="container-fluid d-lg-flex justify-content-lg-between p-3 p-lg-0">
         <div class="d-flex justify-content-between col-lg-auto">
             <h1 class="my-2 ms-2 ms-lg-4" id="name"><a class="he-white p-lg-3" href="/">Terrier <span class="bolder">Cyprien</span></a></h1>
-            <div class='menu-button align-self-center' data-bs-target="#menu-collapse" data-bs-toggle="collapse" onclick="addAnim()">
+            <div class='menu-button align-self-center me-3' data-bs-target="#menu-collapse" data-bs-toggle="collapse" onclick="addAnim()">
             </div>
         </div>
-        <div class="col-lg-8 col-xxl-6 p-1 pt-lg-3" >
-            <ul class="w-100 p-0 m-0 collapse d-lg-flex justify-content-lg-evenly" id="menu-collapse">
+        <div class="col-lg-8 col-xxl-6 p-1 pt-lg-3">
+            <ul class="w-100 p-0 m-0 collapse d-lg-flex justify-content-lg-evenly text-center" id="menu-collapse">
                 <li class="li_left">
-                    <a class="he-white" href="#"><span>01.</span> Accueil</a>
+                    <a class="he-white" href="#" onclick="clickBurger()"><span>01.</span> Accueil</a>
                 </li>
                 <li class="li_left2">
-                    <a class="he-white" href="#a_propos"><span>02.</span> A Propos</a>
+                    <a class="he-white" href="#a_propos" onclick="clickBurger()"><span>02.</span> A Propos</a>
                 </li>
                 <li class="li_left3">
-                    <a class="he-white" href="#competence"><span>03.</span> Compétence</a>
+                    <a class="he-white" href="#competence" onclick="clickBurger()"><span>03.</span> Compétence</a>
                 </li>
                 <li class="li_left4">
-                    <a class="he-white" href="#formation"><span>04.</span> Formation</a>
+                    <a class="he-white" href="#formation" onclick="clickBurger()"><span>04.</span> Formation</a>
                 </li>
                 <li class="li_left5">
-                    <a class="he-white" href="#contact"><span>05.</span> Contact</a>
+                    <a class="he-white" href="#contact" onclick="clickBurger()"><span>05.</span> Contact</a>
                 </li>
             </ul>
         </div>
     </header>
     <main class="container-fluid d-flex he-white">
         <div class="p-5">
-            <p class="mb-4">Bienvenue sur mon Portfolio !</p>
-            <h1 class="mb-4 display-4 text-center">Je m'appelle <span class="text-bold display-2">Cyprien Terrier</span></h1>
-            <h2 class="mb-2 text-bold text-center h3 me-white">Je débute dans le Développement Web</h2>
-            <div class="d-flex">
-                <p class="my-5 w-50">Je suis actuellement étudiant dans le domaine dans le domaine du <span class="bolder">Développement Web et Web Mobile</span>, domaine qui m'a toujours intrigué et intéressé. J'intègre un bachelor développement en 3e année avec un rythme d'alternance d'1 semaine école, 2 semaines entreprise.</p>
-                <a href="/image/TERRIER_Cyprien_CV.pdf"  class="btn btn-outline-secondary my-auto he-white" target="_blank">Voir mon CV</a>
+            <p class="mb-5 mt-lg-0 mb-lg-4 text-lg-start">Bienvenue sur mon Portfolio !</p>
+            <h1 class="my-5 mt-lg-0 mb-lg-4 me-white display-4f text-lg-center">Je m'appelle <span class="text-bold display-1">Cyprien Terrier</span></h1>
+            <h2 class="my-5 mt-lg-0 mb-lg-2 me-white h4 text-bold text-lg-center">Je débute dans le Développement Web</h2>
+            <div class="d-block d-lg-flex">
+                <p class="col-lg-6 my-5">Je suis actuellement étudiant dans le domaine dans le domaine du <span class="bolder">Développement Web et Web Mobile</span>, domaine qui m'a toujours intrigué et intéressé. J'intègre un bachelor développement en 3e année avec un rythme d'alternance d'1 semaine école, 2 semaines entreprise.</p>
+                <a class="btn col-lg-auto btn-outline-secondary he-white my-lg-auto" href="/image/TERRIER_Cyprien_CV.pdf" target="_blank">Voir mon CV</a>
             </div>
         </div>
-    </main> 
-    <aside class="position-fixed">
+    </main>
+    <aside class="position-fixed d-none d-lg-block">
         <a href="mailto:cyprien.terrier07@gmail.com" class="he-white" target="_blank">cyprien.terrier07@gmail.com</a>
     </aside>
-    <section class="container-fluid d-flex he-white position-relative" id="a_propos">
-        <div class="col-6 text-white text-center" id="about">
+    <section class="container-fluid d-block d-lg-flex he-white position-relative" id="a_propos">
+        <div class="col-lg-6 text-white text-center" id="about">
             <h1 class="mb-5"><span class="special_blue">02. </span> A Propos</h1>
-            <p class="mb-0">Salut ! <span>Cyprien</span> Terrier pour vous servir!</p>
+            <p class="mb-0">Salut ! <span>Cyprien Terrier</span> pour vous servir !</p>
             <p>Comment allez vous ? Moi ? Super !</p>
             <p> &#92;&nbsp;&#40; ⁀▽⁀ &rpar;&nbsp;&frasl; </p>
             <p>Je m'amuse par-ci, par-là entre <span class="bolder">développement web et loisirs personnels.</span> J'ai validé mon bac en 2021 et c'est quelques temps après que je me suis mis au web dev. Etant donné que je débute dans ce domaine je reste encore <span class="bolder">inexpérimenté</span> mais je compte bien m'améliorer dans le futur !</p>
@@ -76,10 +76,12 @@
             <p>Me concernant j'aime bien quand mon travail est <span class="bolder">bien fait</span>, même si je finis par prendre plus de temps que prévu. J'suis patient et j'ai beaucoup de temps à perdre de toute façon.</p>
             <p>&#61;w&#61;</p>
         </div>
-        <div class="position-absolute" id="shadow">
-        </div>
-        <div class="position-absolute d-flex" id="blob">
-            <img src="/image/photo2_nobg.png" class="img-fluid m-auto" alt="moi">
+        <div class="col-lg-4 d-block d-lg-flex position-relative me-4 my-5 me-lg-5">
+            <div class="position-absolute top-50 start-50 translate-middle" id="shadow">
+            </div>
+            <div class="d-flex m-auto" id="blob">
+                <img src="/image/photo2_nobg.png" class="img-fluid m-auto" alt="moi">
+            </div>
         </div>
     </section>
     <section class="container-fluid he-white text-center" id="competence">
@@ -88,55 +90,55 @@
                 <h1><span class="special_blue">03. </span>Compétence</h1>
                 <p>Débutant &minus;&gt; Intermédiaire &minus;&gt; Avancé &minus;&gt; Expert</p>
             </div>
-            <div class="col-3">
+            <div class="col-10 col-sm-5 col-lg-3">
                 <h1 class="mb-0"><img class="img-fluid" src="/image/2048px-Python-logo-notext.svg.png" alt="pythonlogo">Python</h1>
-                <p>Avancé</p>
+                <p>Expert</p>
                 <div></div>
                 <div></div>
             </div>
-            <div class="col-3">
+            <div class="col-10 col-sm-5 col-lg-3">
                 <h1 class="mb-0"><img class="img-fluid" src="/image/640px-HTML5_logo_and_wordmark.svg.png" alt="htmllogo">HTML</h1>
                 <p>Avancé</p>
                 <div></div>
                 <div></div>
             </div>
-            <div class="col-3">
+            <div class="col-10 col-sm-5 col-lg-3">
                 <h1 class="mb-0"><img class="img-fluid" src="/image/CSS3_logo_and_wordmark.svg.png" alt="csslogo">CSS</h1>
                 <p>Avancé</p>
                 <div></div>
                 <div></div>
             </div>
-            <div class="col-3">
+            <div class="col-10 col-sm-5 col-lg-3">
                 <h1 class="mb-0"><img class="img-fluid" src="/image/JavaScript-Logo.png" alt="jslogo">Javascript</h1>
                 <p>Intermédiaire</p>
                 <div></div>
                 <div></div>
             </div>
-            <div class="col-3">
+            <div class="col-10 col-sm-5 col-lg-3">
                 <h1 class="mb-0"><img class="img-fluid" src="/image/sql-logo.png" alt="sqllogo">SQL</h1>
                 <p>Intermédiaire</p>
                 <div></div>
                 <div></div>
             </div>
-            <div class="col-3">
+            <div class="col-10 col-sm-5 col-lg-3">
                 <h1 class="mb-0"> <img class="img-fluid" src="/image/umllogo.png" alt="umllogo">UML</h1>
                 <p>Débutant</p>
                 <div></div>
                 <div></div>
             </div>
-            <div class="col-3">
+            <div class="col-10 col-sm-5 col-lg-3">
                 <h1 class="mb-0"><img class="img-fluid" src="/image/PHP-logo.svg.png" alt="phplogo">PHP</h1>
                 <p>Débutant</p>
                 <div></div>
                 <div></div>
             </div>
-            <div class="col-3">
+            <div class="col-10 col-sm-5 col-lg-3">
                 <h1 class="mb-0"><img class="img-fluid" src="/image/security_logo-removebg-preview.png" alt="securitylogo">Sécurité Web</h1>
                 <p>Débutant</p>
                 <div></div>
                 <div></div>
             </div>
-            <div class="col-3">
+            <div class="col-10 col-sm-5 col-lg-3">
                 <h1 class="mb-0"><img class="img-fluid" src="/image/Accessibility_logo.png" alt="accessibilitylogo">Accessibilité</h1>
                 <p>Débutant</p>
                 <div></div>
@@ -147,17 +149,20 @@
     <section class="container-fluid d-flex he-white" id="formation">
         <div>
             <h1 class="pb-5 mb-5 text-center" id="formation_title"><span class="special_blue">04. </span>Formation</h1>
-            <ul>
-                <li>
-                    <h1 class="d-flex">Bachelor Développement 3e année <span class="he-white">sept. 2022</span></h1>
+            <ul class="m-0">
+                <li class="row justify-content-between">
+                    <h1 class="col-auto">Bachelor Développement 3e année</h1>
+                    <p class="col-auto text-lg-end me-white mb-2">sept. 2022</p>
                     <p class="le-white">EPSI, Lille</p>
                 </li>
-                <li>
-                    <h1 class="d-flex">DWWM : Développeur Web - Web Mobile <span  class="he-white">janv. 2022 - Présent</span></h1>
+                <li class="row justify-content-between">
+                    <h1 class="col-auto">DWWM : Développeur Web - Web Mobile</h1>
+                    <p class="col-auto text-lg-end me-white mb-2">janv. 2022 - Présent</p>
                     <p class="le-white">EPSI, Lille</p>
                 </li>
-                <li>
-                    <h1 class="d-flex">Baccalauréat Général <span  class="he-white">2018 - 2021</span></h1>
+                <li class="row justify-content-between">
+                    <h1 class="col-auto">Baccalauréat Général</h1>
+                    <p class="col-auto text-lg-end me-white mb-2">2018 - 2021</p>
                     <p class="le-white">Lycée Faidherbe, Lille</p>
                 </li>
             </ul>
@@ -173,7 +178,7 @@
         </div>
     </section>
     <footer class="mt-5">
-        <p class="me-white text-center">Site créé par Terrier Cyprien</p>
+        <p class="me-white text-center">Site créé par <span>Terrier Cyprien</span></p>
     </footer>
     <script src="/js/jquery.slim.js"></script>
     <script src="/js/bootstrap.min.js"></script>
