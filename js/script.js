@@ -1,4 +1,4 @@
-/*#region On scroll up or down, hide or show the header */
+//#region On scroll up or down, hide or show the header
 const header = $("header");
 const scrollUp = "scroll-up";
 const scrollDown = "scroll-down";
@@ -23,9 +23,9 @@ window.addEventListener("scroll", () => {
   }
   lastScroll = currentScroll;
 });
-/*#endregion */
+//#endregion
 
-/*#region When the mouse is on the top of the page, show the header */
+//#region When the mouse is on the top of the page, show the header
 var headerSizeY = $('header')[0].clientHeight
 function mousemove(event){
   if (event.clientY < headerSizeY) {
@@ -34,9 +34,9 @@ function mousemove(event){
   }
 }
 window.addEventListener('mousemove', mousemove);
-/*#endregion */
+//#endregion
 
-/*#region When the page is ready, remove the C animation, scroll to the top, makes the sections in the body disappear then do a loop about giving the sections an animatino to appear*/
+//#region When the page is ready, remove the C animation, scroll to the top, makes the sections in the body disappear then do a loop about giving the sections an animatino to appear
 $(document).ready(
   setTimeout(() => {
     $('#logo_box').addClass('d-none')
@@ -71,9 +71,9 @@ $(document).ready(
     }
   }, 2000)
 )
-/*#endregion */
+//#endregion 
 
-/*#region As the level of skills increases, so do the progress bars */
+//#region As the level of skills increases, so do the progress bars
 var divSkills = $('#skills').children()
 for (let index = 0; index < divSkills.length; index++) {
   if (divSkills[index].children[1].textContent == 'Débutant') {
@@ -90,14 +90,14 @@ for (let index = 0; index < divSkills.length; index++) {
     divSkills[index].children[3].style.borderRadius = '10px'
   }
 }
-/*#endregion */
+//#endregion 
 
-/*#region When you scroll down, the elements appears*/
+//#region When you scroll down, the elements appears
 function def() {
 }
-/*#endregion */
+//#endregion
 
-/*#region Menu Burger Animation + Clic*/
+//#region Menu Burger Animation + Clic
 addAnim = () => {
   if ($('.menu-button').hasClass('menu-button-anim')) {
     $('.menu-button').removeClass('menu-button-anim')
@@ -110,3 +110,4 @@ addAnim = () => {
 function clickBurger() {
   $('.menu-button').click()
 }
+//#endregion
